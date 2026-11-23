@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MainCrafts | Build Smarter. Create Without Limits.</title>
+  <meta name="description" content="MainCrafts crafts innovative solutions, modern technology, and creative digital experiences that move businesses forward. Build smarter and create without limits.">
+  <meta name="keywords" content="MainCrafts, Web Development, UI/UX Design, Digital Solutions, Technology Consulting, Software Engineering">
+  <meta name="theme-color" content="#080B14">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MainCrafts | Build Smarter. Create Without Limits.">
+  <meta property="og:description" content="Transform ideas into powerful digital experiences with modern technology and creative engineering.">
+  <meta property="og:image" content="assets/favicon.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Canvas for Interactive Subtle Particle Mesh -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Ambient Lighting Glows -->
+  <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-3" aria-hidden="true"></div>
+  <div class="ambient-grid-overlay" aria-hidden="true"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="site-header" id="main-header">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="MainCrafts Home">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="36" height="36" rx="10" fill="#101625" stroke="url(#nav-logo-grad)" stroke-width="1.5" />
+            <path d="M10 28V14L16 20V28H10Z" fill="url(#nav-facet-1)" />
+            <path d="M16 20L20 15L24 20V28H16V20Z" fill="url(#nav-logo-grad)" />
+            <path d="M24 20L30 14V28H24V20Z" fill="url(#nav-facet-2)" />
+            <circle cx="20" cy="21" r="2" fill="#FFFFFF" />
+            <defs>
+              <linearGradient id="nav-logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#22D3EE" />
+                <stop offset="50%" stop-color="#4F8CFF" />
+                <stop offset="100%" stop-color="#8B5CF6" />
+              </linearGradient>
+              <linearGradient id="nav-facet-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4F8CFF" />
+                <stop offset="100%" stop-color="#22D3EE" />
+              </linearGradient>
+              <linearGradient id="nav-facet-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8B5CF6" />
+                <stop offset="100%" stop-color="#4F8CFF" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="brand-text">Main<span class="text-gradient">Crafts</span><span class="brand-dot"></span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="main-nav" id="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#features" class="nav-link">Features</a>
+          </li>
+          
+          <!-- Dropdown Menu for Services -->
+          <li class="nav-item has-dropdown" id="services-dropdown-item">
+            <a href="#services" class="nav-link dropdown-toggle" id="services-dropdown-btn" aria-expanded="false" aria-haspopup="true">
+              Services <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown-menu" id="services-dropdown-menu" role="menu" aria-labelledby="services-dropdown-btn">
+              <div class="dropdown-inner">
+                <a href="#services" class="dropdown-option" data-service="web-dev" role="menuitem">
+                  <div class="option-icon icon-blue">
+                    <i class="fa-solid fa-code"></i>
+                  </div>
+                  <div class="option-info">
+                    <span class="option-title">Web Development</span>
+                    <span class="option-desc">Scalable modern full-stack web apps</span>
+                  </div>
+                </a>
+                <a href="#services" class="dropdown-option" data-service="ui-ux" role="menuitem">
+                  <div class="option-icon icon-violet">
+                    <i class="fa-solid fa-palette"></i>
+                  </div>
+                  <div class="option-info">
+                    <span class="option-title">UI/UX Design</span>
+                    <span class="option-desc">Intuitive, engaging user experiences</span>
+                  </div>
+                </a>
+                <a href="#services" class="dropdown-option" data-service="digital-solutions" role="menuitem">
+                  <div class="option-icon icon-cyan">
+                    <i class="fa-solid fa-cubes-stacked"></i>
+                  </div>
+                  <div class="option-info">
+                    <span class="option-title">Digital Solutions</span>
+                    <span class="option-desc">Cloud architecture & automated workflows</span>
+                  </div>
+                </a>
+                <a href="#services" class="dropdown-option" data-service="tech-consulting" role="menuitem">
+                  <div class="option-icon icon-accent">
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <div class="option-info">
+                    <span class="option-title">Technology Consulting</span>
+                    <span class="option-desc">Strategic roadmaps & performance audit</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right Action CTA -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-sm btn-talk" id="nav-cta-btn">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle mobile navigation" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav" aria-hidden="true">
+      <div class="mobile-nav-inner">
+        <ul class="mobile-nav-links">
+          <li>
+            <a href="#home" class="mobile-nav-link active">
+              <i class="fa-solid fa-house"></i> Home
+            </a>
+          </li>
+          <li>
+            <a href="#features" class="mobile-nav-link">
+              <i class="fa-solid fa-layer-group"></i> Features
+            </a>
+          </li>
+          <!-- Mobile Accordion for Services -->
+          <li class="mobile-accordion">
+            <button class="mobile-accordion-toggle" id="mobile-services-toggle" aria-expanded="false">
+              <span><i class="fa-solid fa-shapes"></i> Services</span>
+              <i class="fa-solid fa-chevron-down mobile-chevron"></i>
+            </button>
+            <div class="mobile-accordion-content" id="mobile-services-content">
+              <a href="#services" class="mobile-sublink" data-service="web-dev">
+                <i class="fa-solid fa-code text-blue"></i> Web Development
+              </a>
+              <a href="#services" class="mobile-sublink" data-service="ui-ux">
+                <i class="fa-solid fa-palette text-violet"></i> UI/UX Design
+              </a>
+              <a href="#services" class="mobile-sublink" data-service="digital-solutions">
+                <i class="fa-solid fa-cubes-stacked text-cyan"></i> Digital Solutions
+              </a>
+              <a href="#services" class="mobile-sublink" data-service="tech-consulting">
+                <i class="fa-solid fa-chart-line text-blue"></i> Technology Consulting
+              </a>
+            </div>
+          </li>
+          <li>
+            <a href="#about" class="mobile-nav-link">
+              <i class="fa-solid fa-circle-info"></i> About
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="mobile-nav-link">
+              <i class="fa-solid fa-envelope"></i> Contact
+            </a>
+          </li>
+        </ul>
+
+        <div class="mobile-nav-cta">
+          <a href="#contact" class="btn btn-primary btn-block">
+            <span>Let's Talk</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+          <div class="mobile-socials">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <!-- Left Hero Content -->
+        <div class="hero-content reveal-fade-up">
+          <!-- Innovation Badge -->
+          <div class="badge-pill">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Innovation • Technology • Creativity</span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="hero-headline">
+            Build Smarter.<br>
+            <span class="text-gradient animated-gradient">Create Without Limits.</span>
+          </h1>
+
+          <!-- Hero Subtitle -->
+          <p class="hero-subtitle">
+            Transform ideas into powerful digital experiences. We craft innovative solutions, modern technology, and creative digital experiences that move businesses forward.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group">
+            <a href="#services" class="btn btn-primary btn-glow">
+              <span>Explore Our Services</span>
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="#about" class="btn btn-secondary">
+              <span>Discover Our Work</span>
+              <i class="fa-solid fa-compass" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <!-- Trust Proof / Metric Highlights -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <div class="metric-value">99.9%</div>
+              <div class="metric-label">Uptime Architecture</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <div class="metric-value">0.8s</div>
+              <div class="metric-label">Ultra-fast Response</div>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <div class="metric-value">100%</div>
+              <div class="metric-label">Client Commitment</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual (Futuristic Tech Interface) -->
+        <div class="hero-visual-wrapper reveal-fade-up delay-2">
+          <!-- Animated Background Glowing Orb -->
+          <div class="hero-glow-orb" aria-hidden="true"></div>
+
+          <!-- Futuristic Interface Window -->
+          <div class="cyber-window">
+            <!-- Window Header Bar -->
+            <div class="window-header">
+              <div class="window-controls">
+                <span class="control-dot dot-red"></span>
+                <span class="control-dot dot-yellow"></span>
+                <span class="control-dot dot-green"></span>
+              </div>
+              <div class="window-title">
+                <i class="fa-solid fa-terminal"></i> maincrafts-core // node-cluster-01
+              </div>
+              <div class="window-status">
+                <span class="live-pulse"></span>
+                <span class="status-text">14ms • Online</span>
+              </div>
+            </div>
+
+            <!-- Window Body -->
+            <div class="window-body">
+              <!-- Code / Pipeline Simulation -->
+              <div class="terminal-block">
+                <div class="terminal-line"><span class="code-keyword">const</span> <span class="code-var">MainCrafts</span> = <span class="code-keyword">await</span> <span class="code-func">initNextGenCore</span>({</div>
+                <div class="terminal-line indent"><span class="code-prop">performance</span>: <span class="code-str">"ultra"</span>,</div>
+                <div class="terminal-line indent"><span class="code-prop">scalability</span>: <span class="code-num">Infinity</span>,</div>
+                <div class="terminal-line indent"><span class="code-prop">experience</span>: <span class="code-str">"limitless"</span></div>
+                <div class="terminal-line">});</div>
+                <div class="terminal-line console-output">
+                  <span class="text-cyan">✔</span> System state: <span class="text-green">READY</span> | Deploying to Edge Mesh...
+                </div>
+              </div>
+
+              <!-- Mini Visual Dashboard Grid -->
+              <div class="mini-dashboard">
+                <div class="mini-card">
+                  <div class="mini-card-header">
+                    <span>Performance Score</span>
+                    <i class="fa-solid fa-gauge-high text-cyan"></i>
+                  </div>
+                  <div class="mini-card-number">99.8<span class="unit">%</span></div>
+                  <div class="mini-card-bar">
+                    <div class="bar-fill" style="width: 98%;"></div>
+                  </div>
+                </div>
+
+                <div class="mini-card">
+                  <div class="mini-card-header">
+                    <span>Global Throughput</span>
+                    <i class="fa-solid fa-bolt text-blue"></i>
+                  </div>
+                  <div class="mini-card-number">4.8<span class="unit">k req/s</span></div>
+                  <div class="mini-card-chart">
+                    <div class="chart-col h-40"></div>
+                    <div class="chart-col h-60"></div>
+                    <div class="chart-col h-80"></div>
+                    <div class="chart-col h-65"></div>
+                    <div class="chart-col h-90"></div>
+                    <div class="chart-col h-100 active"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating UI Panel 1: Top Right Metrics -->
+            <div class="floating-panel panel-1 float-slow">
+              <div class="panel-icon icon-blue">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="panel-content">
+                <span class="panel-title">Enterprise Security</span>
+                <span class="panel-sub">End-to-End Encryption</span>
+              </div>
+              <span class="panel-badge badge-active">Active</span>
+            </div>
+
+            <!-- Floating UI Panel 2: Bottom Left Speed Status -->
+            <div class="floating-panel panel-2 float-reverse">
+              <div class="panel-icon icon-violet">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <div class="panel-content">
+                <span class="panel-title">Cloud Native Engine</span>
+                <span class="panel-sub">Zero Cold Starts • Edge Ready</span>
+              </div>
+            </div>
+
+            <!-- Floating UI Panel 3: Bottom Right Quick Stack -->
+            <div class="floating-panel panel-3 float-medium">
+              <div class="stack-avatars">
+                <span class="stack-badge badge-cyan"><i class="fa-brands fa-react"></i></span>
+                <span class="stack-badge badge-blue"><i class="fa-brands fa-node-js"></i></span>
+                <span class="stack-badge badge-violet"><i class="fa-brands fa-aws"></i></span>
+              </div>
+              <div class="panel-content">
+                <span class="panel-title">Modern Stack</span>
+                <span class="panel-sub">Full Stack Excellence</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Scroll Down Indicator -->
+      <div class="scroll-indicator">
+        <a href="#features" class="scroll-down-link" aria-label="Scroll down to Features">
+          <span class="scroll-text">Explore Capabilities</span>
+          <div class="mouse-icon">
+            <span class="mouse-wheel"></span>
+          </div>
+          <i class="fa-solid fa-chevron-down scroll-arrow" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features-section section-padding" id="features">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center reveal-fade-up">
+          <div class="section-tag">
+            <i class="fa-solid fa-cube"></i> CORE CAPABILITIES
+          </div>
+          <h2 class="section-title">
+            Technology That <span class="text-gradient">Moves You Forward</span>
+          </h2>
+          <p class="section-subtitle">
+            Everything you need to transform your ideas into digital reality.
+          </p>
+        </div>
+
+        <!-- 4 Premium Feature Cards Grid -->
+        <div class="features-grid">
+          <!-- Card 1: Lightning Fast -->
+          <div class="feature-card reveal-fade-up delay-1" data-tilt>
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-inner">
+              <div class="feature-icon-wrapper icon-lightning">
+                <div class="icon-orb"></div>
+                <i class="fa-solid fa-bolt-lightning" aria-hidden="true"></i>
+              </div>
+              <div class="feature-badge">SPEED & EFFICIENCY</div>
+              <h3 class="feature-name">Lightning Fast</h3>
+              <p class="feature-desc">
+                Optimized experiences built for speed, performance, and seamless interaction.
+              </p>
+              <ul class="feature-points">
+                <li><i class="fa-solid fa-check text-cyan"></i> Sub-second rendering</li>
+                <li><i class="fa-solid fa-check text-cyan"></i> Asset & bundle optimization</li>
+                <li><i class="fa-solid fa-check text-cyan"></i> Fluid 60fps animations</li>
+              </ul>
+              <div class="card-footer-accent">
+                <span class="latency-pill"><i class="fa-solid fa-gauge"></i> &lt; 0.8s TTI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Responsive Design -->
+          <div class="feature-card reveal-fade-up delay-2" data-tilt>
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-inner">
+              <div class="feature-icon-wrapper icon-devices">
+                <div class="icon-orb"></div>
+                <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+              </div>
+              <div class="feature-badge">OMNICHANNEL</div>
+              <h3 class="feature-name">Responsive Design</h3>
+              <p class="feature-desc">
+                Beautiful experiences that adapt perfectly across every device and screen.
+              </p>
+              <ul class="feature-points">
+                <li><i class="fa-solid fa-check text-violet"></i> Fluid modern typography</li>
+                <li><i class="fa-solid fa-check text-violet"></i> Touch & gesture friendly</li>
+                <li><i class="fa-solid fa-check text-violet"></i> Mobile-first architecture</li>
+              </ul>
+              <div class="card-footer-accent">
+                <span class="latency-pill"><i class="fa-solid fa-mobile-screen"></i> 100% Adaptive</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Scalable Solutions -->
+          <div class="feature-card reveal-fade-up delay-3" data-tilt>
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-inner">
+              <div class="feature-icon-wrapper icon-rocket">
+                <div class="icon-orb"></div>
+                <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+              </div>
+              <div class="feature-badge">CLOUD & INFRASTRUCTURE</div>
+              <h3 class="feature-name">Scalable Solutions</h3>
+              <p class="feature-desc">
+                Future-ready technology designed to grow alongside your business.
+              </p>
+              <ul class="feature-points">
+                <li><i class="fa-solid fa-check text-blue"></i> Modular microservices</li>
+                <li><i class="fa-solid fa-check text-blue"></i> Cloud-native elasticity</li>
+                <li><i class="fa-solid fa-check text-blue"></i> Fault-tolerant systems</li>
+              </ul>
+              <div class="card-footer-accent">
+                <span class="latency-pill"><i class="fa-solid fa-chart-line"></i> 10x Scale Ready</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Innovation First -->
+          <div class="feature-card reveal-fade-up delay-4" data-tilt>
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="card-inner">
+              <div class="feature-icon-wrapper icon-lightbulb">
+                <div class="icon-orb"></div>
+                <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+              </div>
+              <div class="feature-badge">VISION & STRATEGY</div>
+              <h3 class="feature-name">Innovation First</h3>
+              <p class="feature-desc">
+                Creative thinking combined with modern technology to solve real problems.
+              </p>
+              <ul class="feature-points">
+                <li><i class="fa-solid fa-check text-cyan"></i> Next-gen framework stack</li>
+                <li><i class="fa-solid fa-check text-cyan"></i> Data-driven decision design</li>
+                <li><i class="fa-solid fa-check text-cyan"></i> AI & modern automation</li>
+              </ul>
+              <div class="card-footer-accent">
+                <span class="latency-pill"><i class="fa-solid fa-brain"></i> Future-Proofed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-section section-padding" id="services">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center reveal-fade-up">
+          <div class="section-tag">
+            <i class="fa-solid fa-sliders"></i> OUR EXPERTISE
+          </div>
+          <h2 class="section-title">
+            What <span class="text-gradient">We Do</span>
+          </h2>
+          <p class="section-subtitle">
+            Comprehensive technology services engineered to elevate modern enterprises and craft standout digital products.
+          </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+          <!-- Service 1: Web Development -->
+          <div class="service-card reveal-fade-up delay-1" id="service-web-dev">
+            <div class="service-glow" aria-hidden="true"></div>
+            <div class="service-header">
+              <div class="service-icon-box icon-cyan-glow">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <span class="service-number">01</span>
+            </div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-summary">
+              Engineered for velocity and scale. We craft state-of-the-art web applications with clean, maintainable architecture and responsive interfaces.
+            </p>
+            <div class="service-tags">
+              <span class="tech-tag">HTML5 / CSS3</span>
+              <span class="tech-tag">JavaScript ES6+</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">REST / GraphQL</span>
+            </div>
+            <ul class="service-checklist">
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> High-performance responsive websites</li>
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Custom web portals & SaaS applications</li>
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Clean, accessible, semantic codebase</li>
+            </ul>
+            <div class="service-action">
+              <button class="service-btn" data-modal="web-dev">
+                <span>Explore Web Development</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service 2: UI/UX Design -->
+          <div class="service-card reveal-fade-up delay-2" id="service-ui-ux">
+            <div class="service-glow" aria-hidden="true"></div>
+            <div class="service-header">
+              <div class="service-icon-box icon-violet-glow">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <span class="service-number">02</span>
+            </div>
+            <h3 class="service-title">UI/UX Design</h3>
+            <p class="service-summary">
+              Intuitive interfaces that captivate and convert. We combine human-centered psychology with sleek futuristic aesthetics and design systems.
+            </p>
+            <div class="service-tags">
+              <span class="tech-tag">Figma</span>
+              <span class="tech-tag">Design Systems</span>
+              <span class="tech-tag">Prototyping</span>
+              <span class="tech-tag">User Research</span>
+            </div>
+            <ul class="service-checklist">
+              <li><i class="fa-solid fa-circle-check text-violet"></i> Interactive wireframes & high-fi prototypes</li>
+              <li><i class="fa-solid fa-circle-check text-violet"></i> Cohesive multi-platform design systems</li>
+              <li><i class="fa-solid fa-circle-check text-violet"></i> Accessibility & behavioral UX audits</li>
+            </ul>
+            <div class="service-action">
+              <button class="service-btn" data-modal="ui-ux">
+                <span>Explore UI/UX Design</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service 3: Digital Solutions -->
+          <div class="service-card reveal-fade-up delay-3" id="service-digital-solutions">
+            <div class="service-glow" aria-hidden="true"></div>
+            <div class="service-header">
+              <div class="service-icon-box icon-blue-glow">
+                <i class="fa-solid fa-cubes-stacked"></i>
+              </div>
+              <span class="service-number">03</span>
+            </div>
+            <h3 class="service-title">Digital Solutions</h3>
+            <p class="service-summary">
+              Seamless infrastructure, cloud workflows, and automation that unify your tech stack and accelerate operations without friction.
+            </p>
+            <div class="service-tags">
+              <span class="tech-tag">Cloud Architecture</span>
+              <span class="tech-tag">API Integration</span>
+              <span class="tech-tag">Workflow Automation</span>
+              <span class="tech-tag">DevOps</span>
+            </div>
+            <ul class="service-checklist">
+              <li><i class="fa-solid fa-circle-check text-blue"></i> Automated CI/CD deployment pipelines</li>
+              <li><i class="fa-solid fa-circle-check text-blue"></i> Cloud infrastructure scaling & security</li>
+              <li><i class="fa-solid fa-circle-check text-blue"></i> Third-party software & payment integrations</li>
+            </ul>
+            <div class="service-action">
+              <button class="service-btn" data-modal="digital-solutions">
+                <span>Explore Digital Solutions</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Service 4: Technology Consulting -->
+          <div class="service-card reveal-fade-up delay-4" id="service-tech-consulting">
+            <div class="service-glow" aria-hidden="true"></div>
+            <div class="service-header">
+              <div class="service-icon-box icon-cyan-glow">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <span class="service-number">04</span>
+            </div>
+            <h3 class="service-title">Technology Consulting</h3>
+            <p class="service-summary">
+              Strategic guidance to navigate technological shifts. We help you choose the right tools, optimize legacy systems, and build for longevity.
+            </p>
+            <div class="service-tags">
+              <span class="tech-tag">Tech Roadmap</span>
+              <span class="tech-tag">Code Audit</span>
+              <span class="tech-tag">Performance</span>
+              <span class="tech-tag">Security Review</span>
+            </div>
+            <ul class="service-checklist">
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Architecture reviews & bottleneck discovery</li>
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Technology migration & modernizations</li>
+              <li><i class="fa-solid fa-circle-check text-cyan"></i> Performance and security hardening</li>
+            </ul>
+            <div class="service-action">
+              <button class="service-btn" data-modal="tech-consulting">
+                <span>Explore Technology Consulting</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / WHY MAINCRAFTS SECTION -->
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Left Column: Story & Vision -->
+          <div class="about-content reveal-fade-up">
+            <div class="section-tag">
+              <i class="fa-solid fa-shield-cat"></i> WHY MAINCRAFTS
+            </div>
+            <h2 class="section-title">
+              Turning Vision Into <span class="text-gradient">Digital Reality</span>
+            </h2>
+            <p class="about-lead">
+              MainCrafts combines technology, creativity, and innovation to create meaningful digital experiences that leave a lasting impression.
+            </p>
+            <p class="about-text">
+              We believe that exceptional digital products do not happen by accident. They are engineered through thoughtful collaboration, rigorous code craftsmanship, and an unwavering commitment to design elegance.
+            </p>
+
+            <div class="about-pillars">
+              <div class="pillar-item">
+                <div class="pillar-icon"><i class="fa-solid fa-microchip text-cyan"></i></div>
+                <div class="pillar-text">
+                  <h4>Engineered For Real-World Impact</h4>
+                  <p>Every line of code and visual component is sculpted to drive tangible business value and user delight.</p>
+                </div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-icon"><i class="fa-solid fa-users-gear text-violet"></i></div>
+                <div class="pillar-text">
+                  <h4>Transparent Collaboration</h4>
+                  <p>We work as your dedicated technical partner from initial conceptualization to post-launch scaling.</p>
+                </div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-icon"><i class="fa-solid fa-shield-halved text-blue"></i></div>
+                <div class="pillar-text">
+                  <h4>Relentless Craftsmanship</h4>
+                  <p>We prioritize zero-bloat architecture, accessibility, robust security, and long-term sustainability.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Highlighted Statistics -->
+          <div class="about-stats-card reveal-fade-up delay-2">
+            <div class="stats-card-glow" aria-hidden="true"></div>
+            <div class="stats-card-inner">
+              <div class="stats-card-header">
+                <div class="stats-badge">
+                  <span class="live-pulse"></span> VERIFIED METRICS
+                </div>
+                <span class="stats-note">Benchmark 2025</span>
+              </div>
+
+              <!-- Animated Counters Grid -->
+              <div class="stats-grid">
+                <!-- Stat 1: 100% Commitment -->
+                <div class="stat-box">
+                  <div class="stat-number-wrap">
+                    <span class="stat-number counter" data-target="100">0</span>
+                    <span class="stat-suffix">%</span>
+                  </div>
+                  <div class="stat-title">100% Commitment</div>
+                  <p class="stat-desc">Dedicated engineering, transparent communication, and relentless delivery on our promises.</p>
+                  <div class="stat-indicator">
+                    <div class="indicator-bar" style="width: 100%;"></div>
+                  </div>
+                </div>
+
+                <!-- Stat 2: Innovative Thinking -->
+                <div class="stat-box">
+                  <div class="stat-number-wrap">
+                    <span class="stat-number counter" data-target="99">0</span>
+                    <span class="stat-suffix">.4%</span>
+                  </div>
+                  <div class="stat-title">Innovative Thinking</div>
+                  <p class="stat-desc">Client satisfaction driven by pioneering ideas, modern frameworks, and continuous learning.</p>
+                  <div class="stat-indicator">
+                    <div class="indicator-bar" style="width: 99.4%;"></div>
+                  </div>
+                </div>
+
+                <!-- Stat 3: Future Ready -->
+                <div class="stat-box full-width">
+                  <div class="stat-number-wrap">
+                    <span class="stat-number counter" data-target="24">0</span>
+                    <span class="stat-suffix">/7</span>
+                  </div>
+                  <div class="stat-title">Future Ready</div>
+                  <p class="stat-desc">Architectures designed for zero downtime, continuous elasticity, and tomorrow's technological advancements.</p>
+                  <div class="stat-badges">
+                    <span class="sub-badge"><i class="fa-solid fa-cloud"></i> Cloud Native</span>
+                    <span class="sub-badge"><i class="fa-solid fa-lock"></i> Zero Trust</span>
+                    <span class="sub-badge"><i class="fa-solid fa-bolt"></i> Instant Load</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Tech Stack Carousel / Ribbon -->
+              <div class="stats-footer-stack">
+                <span class="stack-label">Crafted with modern standards:</span>
+                <div class="stack-icons">
+                  <span title="HTML5 Semantic"><i class="fa-brands fa-html5"></i></span>
+                  <span title="CSS3 Modern Layouts"><i class="fa-brands fa-css3-alt"></i></span>
+                  <span title="Modern JavaScript"><i class="fa-brands fa-js"></i></span>
+                  <span title="Node.js Engine"><i class="fa-brands fa-node"></i></span>
+                  <span title="Git Version Control"><i class="fa-brands fa-git-alt"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION (CTA) SECTION -->
+    <section class="cta-section section-padding">
+      <div class="container">
+        <div class="cta-banner reveal-fade-up">
+          <!-- Background Glow Gradients -->
+          <div class="cta-bg-gradient" aria-hidden="true"></div>
+          <div class="cta-grid-bg" aria-hidden="true"></div>
+
+          <!-- Decorative Floating Shapes -->
+          <div class="cta-shape shape-1" aria-hidden="true"></div>
+          <div class="cta-shape shape-2" aria-hidden="true"></div>
+
+          <div class="cta-content text-center">
+            <div class="badge-pill mb-3">
+              <span class="badge-dot"></span>
+              <span class="badge-text">Start Your Transformation</span>
+            </div>
+
+            <!-- Headline -->
+            <h2 class="cta-headline">
+              Have an Idea? <span class="text-gradient">Let's Build It.</span>
+            </h2>
+
+            <!-- Subtitle -->
+            <p class="cta-subtitle">
+              Every great digital experience begins with an idea. Let's turn yours into reality.
+            </p>
+
+            <!-- Action Button -->
+            <div class="cta-buttons">
+              <button class="btn btn-primary btn-lg btn-glow" id="cta-start-btn">
+                <span>Get Started Today</span>
+                <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+              </button>
+              <a href="#services" class="btn btn-secondary btn-lg">
+                <span>View All Services</span>
+              </a>
+            </div>
+
+            <!-- Guarantee Note -->
+            <div class="cta-guarantee">
+              <span><i class="fa-solid fa-clock-rotate-left text-cyan"></i> Fast turnaround & consultation within 24 hours</span>
+              <span>•</span>
+              <span><i class="fa-solid fa-circle-check text-blue"></i> No obligations inquiry</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center reveal-fade-up">
+          <div class="section-tag">
+            <i class="fa-solid fa-paper-plane"></i> GET IN TOUCH
+          </div>
+          <h2 class="section-title">
+            Let's Start a <span class="text-gradient">Conversation</span>
+          </h2>
+          <p class="section-subtitle">
+            Whether you have an upcoming project, need architectural advice, or want to discuss a new concept, we're here to help.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Column -->
+          <div class="contact-info-card reveal-fade-up delay-1">
+            <div class="contact-info-header">
+              <h3>Connect With MainCrafts</h3>
+              <p>Direct communication with our engineering and design team.</p>
+            </div>
+
+            <div class="info-items">
+              <div class="info-item">
+                <div class="info-icon icon-blue">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="info-detail">
+                  <span class="info-label">Direct Inquiries</span>
+                  <a href="mailto:hello@maincrafts.tech" class="info-value copy-email-btn" title="Click to copy email">
+                    hello@maincrafts.tech <i class="fa-regular fa-copy copy-icon"></i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon icon-violet">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="info-detail">
+                  <span class="info-label">Studio & Innovation Hub</span>
+                  <span class="info-value">Tech Innovation Quarter, Global Remote & On-Site</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon icon-cyan">
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+                <div class="info-detail">
+                  <span class="info-label">Response Commitment</span>
+                  <span class="info-value">Replies within 2 to 4 business hours</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media Handles -->
+            <div class="contact-social-box">
+              <span class="social-box-title">Follow Our Craft</span>
+              <div class="social-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="X (Twitter)">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Discord">
+                  <i class="fa-brands fa-discord"></i>
+                </a>
+                <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Dribbble">
+                  <i class="fa-brands fa-dribbble"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Column -->
+          <div class="contact-form-card reveal-fade-up delay-2">
+            <form id="contact-form" class="main-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Your Name <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-regular fa-user input-icon"></i>
+                    <input type="text" id="contact-name" name="name" placeholder="John Doe" required autocomplete="name">
+                  </div>
+                  <span class="error-msg" id="name-error">Please enter your name</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email">Work Email <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope input-icon"></i>
+                    <input type="email" id="contact-email" name="email" placeholder="john@company.com" required autocomplete="email">
+                  </div>
+                  <span class="error-msg" id="email-error">Please enter a valid email address</span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-service">Service of Interest</label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-shapes input-icon"></i>
+                    <select id="contact-service" name="service">
+                      <option value="general">Select a service...</option>
+                      <option value="web-dev">Web Development</option>
+                      <option value="ui-ux">UI/UX Design</option>
+                      <option value="digital-solutions">Digital Solutions</option>
+                      <option value="tech-consulting">Technology Consulting</option>
+                      <option value="other">Custom Engineering Inquiry</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-budget">Estimated Scope / Budget</label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-tag input-icon"></i>
+                    <select id="contact-budget" name="budget">
+                      <option value="unspecified">Select scope range...</option>
+                      <option value="starter">&lt; $5,000 (MVP / Rapid prototype)</option>
+                      <option value="medium">$5,000 - $15,000 (Full-scale product)</option>
+                      <option value="enterprise">$15,000+ (Enterprise ecosystem)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Project Description <span class="required">*</span></label>
+                <div class="input-wrapper textarea-wrapper">
+                  <i class="fa-regular fa-message input-icon textarea-icon"></i>
+                  <textarea id="contact-message" name="message" rows="4" placeholder="Tell us about your project vision, timeline, and goals..." required></textarea>
+                </div>
+                <span class="error-msg" id="message-error">Please tell us a little about your project</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block btn-glow" id="form-submit-btn">
+                <span>Send Project Inquiry</span>
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo" aria-label="MainCrafts Home">
+            <div class="logo-symbol">
+              <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="36" height="36" rx="10" fill="#101625" stroke="url(#ftr-logo-grad)" stroke-width="1.5" />
+                <path d="M10 28V14L16 20V28H10Z" fill="url(#ftr-facet-1)" />
+                <path d="M16 20L20 15L24 20V28H16V20Z" fill="url(#ftr-logo-grad)" />
+                <path d="M24 20L30 14V28H24V20Z" fill="url(#ftr-facet-2)" />
+                <circle cx="20" cy="21" r="2" fill="#FFFFFF" />
+                <defs>
+                  <linearGradient id="ftr-logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#22D3EE" />
+                    <stop offset="50%" stop-color="#4F8CFF" />
+                    <stop offset="100%" stop-color="#8B5CF6" />
+                  </linearGradient>
+                  <linearGradient id="ftr-facet-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#4F8CFF" />
+                    <stop offset="100%" stop-color="#22D3EE" />
+                  </linearGradient>
+                  <linearGradient id="ftr-facet-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8B5CF6" />
+                    <stop offset="100%" stop-color="#4F8CFF" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span class="brand-text">Main<span class="text-gradient">Crafts</span><span class="brand-dot"></span></span>
+          </a>
+          <p class="footer-desc">
+            MainCrafts combines technology, creativity, and innovation to craft extraordinary digital experiences. We empower modern startups and forward-thinking businesses to build smarter and scale without limits.
+          </p>
+          <div class="footer-status-pill">
+            <span class="status-indicator"></span>
+            <span>All systems operational • 99.9% SLA</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+            <li><a href="#features"><i class="fa-solid fa-angle-right"></i> Features</a></li>
+            <li><a href="#services"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="#about"><i class="fa-solid fa-angle-right"></i> About MainCrafts</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-angle-right"></i> Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Services Links -->
+        <div class="footer-links-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#services" data-service="web-dev"><i class="fa-solid fa-angle-right"></i> Web Development</a></li>
+            <li><a href="#services" data-service="ui-ux"><i class="fa-solid fa-angle-right"></i> UI/UX Design</a></li>
+            <li><a href="#services" data-service="digital-solutions"><i class="fa-solid fa-angle-right"></i> Digital Solutions</a></li>
+            <li><a href="#services" data-service="tech-consulting"><i class="fa-solid fa-angle-right"></i> Technology Consulting</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Community Column -->
+        <div class="footer-links-col">
+          <h4 class="footer-heading">Contact & Connect</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-envelope text-cyan"></i>
+              <span>hello@maincrafts.tech</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot text-violet"></i>
+              <span>Tech Innovation Quarter</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-shield-check text-blue"></i>
+              <span>Full Stack Web Dev Internship</span>
+            </li>
+          </ul>
+          <div class="footer-socials">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Copyright & Legal -->
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; 2025 MainCrafts. All rights reserved. Full Stack Web Development Internship – Task 1.
+        </p>
+        <div class="legal-links">
+          <button class="legal-link-btn" data-modal="privacy">Privacy Policy</button>
+          <span class="legal-divider">|</span>
+          <button class="legal-link-btn" data-modal="terms">Terms & Conditions</button>
+          <span class="legal-divider">|</span>
+          <a href="#contact" class="legal-anchor">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- INTERACTIVE SERVICE DETAIL / LEGAL MODAL -->
+  <div class="modal-overlay" id="interactive-modal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-content" id="modal-body-content">
+        <!-- Injected via JavaScript dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notification" id="toast-notify" role="alert" aria-live="polite">
+    <div class="toast-icon" id="toast-icon">
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+    <div class="toast-message" id="toast-message">Notification message here</div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

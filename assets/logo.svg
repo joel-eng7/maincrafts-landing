@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <defs>
+    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE" />
+      <stop offset="50%" stop-color="#4F8CFF" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    <linearGradient id="logo-facet-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F8CFF" />
+      <stop offset="100%" stop-color="#22D3EE" />
+    </linearGradient>
+    <linearGradient id="logo-facet-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#4F8CFF" />
+    </linearGradient>
+    <filter id="logo-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Icon Container -->
+  <rect x="2" y="4" width="40" height="40" rx="10" fill="#101625" stroke="url(#logo-grad)" stroke-width="1.5" />
+  
+  <g filter="url(#logo-glow)">
+    <path d="M11 32V16L18 23V32H11Z" fill="url(#logo-facet-1)" />
+    <path d="M18 23L22 18L26 23V32H18V23Z" fill="url(#logo-grad)" />
+    <path d="M26 23L33 16V32H26V23Z" fill="url(#logo-facet-2)" />
+    <circle cx="22" cy="24" r="2" fill="#FFFFFF" />
+  </g>
+
+  <!-- Brand Typography -->
+  <text x="52" y="30" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+    Main<tspan fill="url(#logo-grad)">Crafts</tspan>
+  </text>
+  
+  <!-- Tiny dot accent -->
+  <circle cx="178" cy="28" r="2.5" fill="#22D3EE" />
+</svg>
